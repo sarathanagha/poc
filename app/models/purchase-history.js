@@ -7,8 +7,16 @@ const {
     } = DS;
 
 let Account = Model.extend({
-    entry: attr()
+    CIN: attr(),
+    ID: attr(),
+    MATNR: attr(),
+    OrderType: attr(),
+    OrderedDate: attr(),
+    OrderedDte: attr(),
+    PricePaid: attr(),
+    QuantitySold: attr(),
+    SellPrice: attr(),
+    Type: attr()
 });
 
 export default Account;
-

@@ -1,44 +1,69 @@
 {{yield}}
 <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 </style>
 
 <table>
   <tr>
+    <th>CIN</th>
     <th>Id</th>
     <th>MATNR</th>
     <th>OrderType</th>
+    <th>OrderedDate</th>
+    <th>OrderedDte</th>
     <th>PricePaid</th>
+    <th>QuantitySold</th>
+    <th>SellPrice</th>
+    <th>Type</th>
   </tr>
-   {{#each purchaseHistory as |historyItem|}}
-        <tr>
-            <td>
-                {{historyItem.properties.ID}}
-            </td>
-            <td>
-                {{historyItem.properties.MATNR}}
-            </td>
-            <td>
-                {{historyItem.properties.OrderType}}
-            </td>
-            <td>
-                {{historyItem.properties.PricePaid}}
-            </td>
-        </tr>
-        {{/each}}
+  {{#each purchaseHistory as |historyItem|}}
+  <tr>
+    <td>
+      {{historyItem.CIN}}
+    </td>
+    <td>
+      {{historyItem.ID}}
+    </td>
+    <td>
+      {{historyItem.MATNR}}
+    </td>
+    <td>
+      {{historyItem.OrderType}}
+    </td>
+    <td>
+      {{historyItem.OrderedDate}}
+    </td>
+    <td>
+      {{historyItem.OrderedDte}}
+    </td>
+    <td>
+      {{historyItem.PricePaid}}
+    </td>
+    <td>
+      {{historyItem.QuantitySold}}
+    </td>
+    <td>
+      {{historyItem.SellPrice}}
+    </td>
+    <td>
+      {{historyItem.Type}}
+    </td>
+  </tr>
+  {{/each}}
 </table>
+{{!-- <div>{{purchaseHistory}}</div> --}}

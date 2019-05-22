@@ -12,6 +12,7 @@ export default Component.extend({
     },
     async fetchHistory() {
         let data = await this.applicationService.fetchHistory();
-        this.set("purchaseHistory", data.entry);        
+        console.log(data)
+        this.set("purchaseHistory", data);        
     }
 });

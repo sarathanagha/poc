@@ -3,14 +3,16 @@
 */
 import Ember from 'ember';
 import RESTAdapter from 'ember-data/adapters/rest';
+//import ApplicationAdapter from './applicationAdapter';
 
 const get = Ember.get;
-
+import DS from 'ember-data';
+const { JSONAPIAdapter } = DS;
 /**
   @class OdataAdapter
   @namespace EmberOdata
 */
-export default RESTAdapter.extend({
+export default JSONAPIAdapter.extend({
 
   /**
     Query String Params.
