@@ -6,11 +6,13 @@ const {
     $
 } = Ember;
 
+
 export default Controller.extend({
     session: service("session"),
     init(){
+       this.get('session').invalidate();
        this.get('session').authenticate('authenticator:oauth2', null, null, '', {
         "authorization": "Basic VElTNVRSTVNxQ01iSGVrNENLVjBFcjBmUURXZEUyQXY6RTRBcU9BOVpmRUROT1EzRQ=="
-       });
+       })
     }
 })
